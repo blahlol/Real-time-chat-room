@@ -1,0 +1,67 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatroom</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+  <div class="text-center container">
+
+
+  
+    <div class="col-xs-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+
+      <form name="username">
+        <p class="display-4">Enter your username</p>
+        <input name="username" id="username" type="text" class="form-control" placeholder="New Username"><br>
+        <input type="submit" value="Enter Lobby" class="btn btn-primary">
+      </form>
+      <br><br>
+      
+    <div style='display: none' id="buttons">
+      <p class="display-4">Select a Chatroom</p>
+      <button class="btn btn-success">gaming</button>
+      <button class="btn btn-success">general</button>
+    </div><br><br>  
+    <div style='display: none;' class="messages"></div>
+    <br><br><br>
+    <form style="display: none;" name="chat" method="post"> 
+      <input type="text" name="message" id="message" class="form-control" placeholder="Your message goes here..."><br>
+      <input type="submit" value="send" class="btn btn-primary">
+    </form>
+
+  </div>
+  </div>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDXnnabfTtA-Xn6okcmVNZS8OsHvNMsx48",
+    authDomain: "buddy-47aab.firebaseapp.com",
+    databaseURL: "https://buddy-47aab.firebaseio.com",
+    projectId: "buddy-47aab",
+    storageBucket: "buddy-47aab.appspot.com",
+    messagingSenderId: "156319896351",
+    appId: "1:156319896351:web:7ed16da274b97c6895562a"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  db=firebase.firestore();
+</script>
+  <script src="hey.js"></script>
+</body>
+
+</html>
